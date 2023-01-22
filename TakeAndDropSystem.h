@@ -3,7 +3,7 @@
 #include "Engine/World.h"
 #include "Components/StaticMeshComponent.h"
 
-void UMyDropAndPutComponent::Drop()
+void UTakeAndDropSystem::Drop()
 {
     AMyCharacter* MyCharacter = Cast<AMyCharacter>(GetOwner());
     if (MyCharacter)
@@ -16,7 +16,7 @@ void UMyDropAndPutComponent::Drop()
     }
 }
 
-void UMyDropAndPutComponent::Put(UStaticMeshComponent* Object)
+void UTakeAndDropSystem::Put(UStaticMeshComponent* Object)
 {
     AMyCharacter* MyCharacter = Cast<AMyCharacter>(GetOwner());
     if (MyCharacter)
